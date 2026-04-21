@@ -1,0 +1,169 @@
+<!-- certificates.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates | Samruddhi Portfolio</title>
+
+<link rel="stylesheet" href="certificates.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">Samruddhi</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="certificates.html" class="active">Certificates</a></li>
+<li><a href="vision.html">Vision</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="cert-section">
+
+<h1 class="main-title">CERTIFICATIONS & ACHIEVEMENTS</h1>
+<div class="line"></div>
+
+<!-- ================== Academic ================== -->
+<h2 class="category">🎓 Academic</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>10th Certificate</h3>
+<p>Academic Qualification</p>
+<a href="certificates/10th.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-school"></i>
+<h3>12th Certificate</h3>
+<p>Academic Qualification</p>
+<a href="certificates/12th.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-file-lines"></i>
+<h3>CET Entrance Exam</h3>
+<p>Entrance Qualification</p>
+<a href="certificates/cet.pdf" target="_blank">View PDF</a>
+</div>
+
+</div>
+
+<!-- ================== Technical ================== -->
+<h2 class="category">💻 Technical</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<i class="fa-brands fa-ibm"></i>
+<h3>IBM Certificate</h3>
+<p>Professional Learning</p>
+<a href="certificates/ibm.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-brands fa-python"></i>
+<h3>Python Essentials 1</h3>
+<p>Programming Fundamentals</p>
+<a href="certificates/python1.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-brands fa-python"></i>
+<h3>Python Essentials 2</h3>
+<p>Advanced Python</p>
+<a href="certificates/python2.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Workshop by GFG</h3>
+<p>GeeksforGeeks</p>
+<a href="certificates/gfg.pdf" target="_blank">View PDF</a>
+</div>
+
+</div>
+
+<!-- ================== AI ================== -->
+<h2 class="category">🤖 AI & Innovation</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<i class="fa-solid fa-trophy"></i>
+<h3>Datathon 2026</h3>
+<p>Innovation Competition</p>
+<a href="certificates/datathon.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-brain"></i>
+<h3>Anthropic : AI Fluency</h3>
+<p>Artificial Intelligence</p>
+<a href="certificates/aifluency.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-robot"></i>
+<h3>Anthropic : Claude 101</h3>
+<p>Claude Basics</p>
+<a href="certificates/claude101.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-user-graduate"></i>
+<h3>AI Fluency for Students</h3>
+<p>Student AI Learning</p>
+<a href="certificates/students.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-handshake-angle"></i>
+<h3>AI Fluency for Nonprofits</h3>
+<p>Social Impact AI</p>
+<a href="certificates/nonprofits.pdf" target="_blank">View PDF</a>
+</div>
+
+</div>
+
+<div class="bottom-quote">
+“Certificates show effort. Skills prove it.”
+</div>
+
+</section>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+});
+
+document.querySelectorAll("a,button").forEach(item=>{
+item.addEventListener("mouseenter",()=>{
+cursor.classList.add("active");
+});
+item.addEventListener("mouseleave",()=>{
+cursor.classList.remove("active");
+});
+});
+</script>
+
+</body>
+</html>

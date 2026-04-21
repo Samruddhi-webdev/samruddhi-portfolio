@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Samruddhi Portfolio</title>
+<link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Samruddhi</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="projects-section">
+
+    <h1 class="main-title">PROJECTS</h1>
+    <div class="line"></div>
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+
+        <div class="project-image">
+            <img src="fraud.jpeg" alt="AI Fraud Detection">
+            <div class="overlay-btns">
+                <a href="https://fraud-detection-ai-vtcqyvoyfoiwrzzfwgoucd.streamlit.app/" target="_blank">Visit Website</a>
+                <a href="fraud_detection.pdf" target="_blank">PPT</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <h2>AI Fraud Detection System</h2>
+
+            <p>
+                Intelligent system created to identify suspicious financial activity using AI logic, risk scoring and anomaly pattern analysis.
+            </p>
+
+            <div class="tags">
+                <span>AI</span>
+                <span>Fraud Detection</span>
+                <span>Analytics</span>
+                <span>Security</span>
+            </div>
+
+            <div class="buttons">
+                <a href="https://fraud-detection-ai-vtcqyvoyfoiwrzzfwgoucd.streamlit.app/" target="_blank">Open Website</a>
+                <a href="fraud_detection.pdf" target="_blank">PPT</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+
+        <div class="project-image">
+            <img src="dubai.jpeg" alt="Dubai Website">
+            <div class="overlay-btns">
+                <a href="dubai/index.html" target="_blank">Visit Website</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <h2>Dubai Tourism Website</h2>
+
+            <p>
+                Modern tourism website showcasing Dubai attractions, luxury destinations, travel visuals and responsive layout.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Responsive</span>
+                <span>Travel UI</span>
+            </div>
+
+            <div class="buttons">
+                <a href="dubai/index.html" target="_blank">Open Website</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+
+        <div class="project-image">
+            <img src="linux.jpeg" alt="Linux Project">
+            <div class="overlay-btns">
+                <a href="cities.pdf" target="_blank">Open PDF</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <h2>Distance Between Two Cities using Linux</h2>
+
+            <p>
+                Command-line based Linux project calculating distance between selected cities using logical processing and scripting.
+            </p>
+
+            <div class="tags">
+                <span>Linux</span>
+                <span>Scripting</span>
+                <span>CLI</span>
+                <span>Logic</span>
+            </div>
+
+            <div class="buttons">
+                <a href="cities.pdf" target="_blank">View PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-card">
+
+        <div class="project-image">
+            <img src="alarm.jpeg" alt="Alarm Project">
+            <div class="overlay-btns">
+                <a href="alarm.pdf" target="_blank">Open PDF</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <h2>Digital Alarm Control System</h2>
+
+            <p>
+                Electronics-based system for alarm timing control with digital logic operations and smart timing mechanism.
+            </p>
+
+            <div class="tags">
+                <span>Digital Logic</span>
+                <span>Electronics</span>
+                <span>Timing</span>
+                <span>Control</span>
+            </div>
+
+            <div class="buttons">
+                <a href="alarm.pdf" target="_blank">View PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a,button").forEach(item=>{
+item.addEventListener("mouseenter",()=>{
+cursor.classList.add("active");
+});
+item.addEventListener("mouseleave",()=>{
+cursor.classList.remove("active");
+});
+});
+</script>
+
+</body>
+</html>

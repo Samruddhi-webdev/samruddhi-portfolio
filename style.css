@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY + NAVY LUXE THEME
+========================= */
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#020b1a,#06152e,#0a2348,#041126);
+    color:#ffffff;
+    overflow-x:hidden;
+    position:relative;
+    cursor:none;
+}
+
+/* clickable items show hand */
+a,
+button,
+.btn,
+input[type="submit"],
+video,
+.project-box,
+.skill-box{
+    cursor:pointer;
+}
+.hero-quote{
+margin-top:45px;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+max-width:700px;
+
+font-size:24px;
+font-weight:600;
+line-height:1.8;
+color:#dff8ff;
+
+padding:18px 28px;
+
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(122,216,255,0.18);
+border-radius:18px;
+
+box-shadow:0 0 20px rgba(122,216,255,0.15);
+font-style:italic;
+letter-spacing:0.4px;
+}
+
+/* =========================
+   CUSTOM CIRCLE CURSOR
+========================= */
+.cursor{
+    width:22px;
+    height:22px;
+    border:2px solid #7ad8ff;
+    border-radius:50%;
+    position:fixed;
+    top:0;
+    left:0;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    z-index:99999;
+    box-shadow:0 0 18px rgba(122,216,255,0.9);
+    transition:0.08s linear;
+}
+
+.cursor.active{
+    width:34px;
+    height:34px;
+    box-shadow:0 0 28px rgba(122,216,255,1);
+}
+
+/* =========================
+   MOVING BACKGROUND TEXT
+========================= */
+.marquee{
+    position:fixed;
+    top:50%;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+}
+
+.marquee-content{
+    display:inline-block;
+    min-width:220%;
+    padding-left:100%;
+    font-size:82px;
+    font-weight:700;
+    letter-spacing:5px;
+    color:rgba(255,255,255,0.03);
+    font-family:'Playfair Display',serif;
+    animation:marqueeMove 45s linear infinite;
+}
+
+@keyframes marqueeMove{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:25px 60px;
+    position:relative;
+    z-index:2;
+}
+
+.logo{
+    display:none;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:500;
+    padding:10px 16px;
+    border-radius:28px;
+    transition:0.4s;
+}
+
+.navbar ul li a:hover{
+    transform:translateY(-6px) scale(1.08);
+    color:#8fdcff;
+    background:rgba(255,255,255,0.05);
+    box-shadow:0 0 18px rgba(111,211,255,0.7);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero2{
+    min-height:88vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:20px 70px;
+    position:relative;
+    z-index:2;
+}
+
+/* =========================
+   TEXT SIDE
+========================= */
+.hero-text{
+    max-width:620px;
+}
+
+/* NAME */
+.hero-text h1{
+    font-family:'Cinzel',serif;
+    font-size:76px;
+    margin-bottom:18px;
+    letter-spacing:2px;
+    background:linear-gradient(90deg,#a6eeff,#63c8ff,#0c4ba8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Name hover */
+.hero-text h1:hover{
+    animation:nameVibrate 1.8s infinite ease-in-out;
+    filter:drop-shadow(0 0 16px rgba(111,211,255,0.9));
+}
+
+@keyframes nameVibrate{
+    0%{transform:translate(0,0);}
+    20%{transform:translate(1px,-1px);}
+    40%{transform:translate(-1px,1px);}
+    60%{transform:translate(1px,1px);}
+    80%{transform:translate(-1px,-1px);}
+    100%{transform:translate(0,0);}
+}
+
+/* CHANGED SECOND LINE */
+.hero-text h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:1.5px;
+    color:#bfe8ff;
+    margin-bottom:22px;
+    line-height:1.6;
+    text-transform:uppercase;
+}
+
+/* THIRD LINE BRIGHT WHITE */
+.hero-text p{
+    font-size:22px;
+    line-height:1.8;
+    color:#ffffff;
+    font-weight:500;
+}
+
+/* slow hover float */
+.hero-text h3:hover,
+.hero-text p:hover{
+    animation:slowFloat 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes slowFloat{
+    from{transform:translateY(0);}
+    to{transform:translateY(-8px);}
+}
+
+/* PHOTO */
+.hero-photo img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #6fd3ff;
+    box-shadow:0 0 35px rgba(111,211,255,0.8);
+    transition:0.5s;
+}
+
+.hero-photo img:hover{
+    transform:scale(1.08) translateY(-8px);
+    box-shadow:0 0 55px rgba(111,211,255,1);
+}
+
+/* BUTTONS */
+button,
+.btn,
+input[type="submit"]{
+    background:transparent;
+    color:#ffffff;
+    border:2px solid #6fd3ff;
+    padding:12px 24px;
+    border-radius:30px;
+    transition:0.4s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover{
+    background:#6fd3ff;
+    color:#02101f;
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:0 0 25px rgba(111,211,255,0.9);
+}
+
+/* UNIVERSAL HOVER */
+.card,
+.skill-box,
+.project-box,
+.progress,
+img,
+video{
+    transition:0.5s;
+}
+
+.card:hover,
+.skill-box:hover,
+.project-box:hover,
+.progress:hover,
+img:hover,
+video:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 22px rgba(111,211,255,0.45);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+.navbar{
+    justify-content:center;
+    padding:20px;
+}
+
+.navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+}
+
+.hero2{
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-text h1{
+    font-size:52px;
+}
+
+.hero-text h3{
+    font-size:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+}
+
+.hero-photo img{
+    width:250px;
+    height:250px;
+    margin-top:30px;
+}
+
+.marquee-content{
+    font-size:42px;
+}
+}

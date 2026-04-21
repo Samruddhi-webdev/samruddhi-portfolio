@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#020b1a,#07152d,#0b2245,#041126);
+color:#ffffff;
+cursor:none;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+/* clickable */
+a,
+button{
+cursor:pointer;
+}
+
+/* =========================
+CUSTOM CURSOR
+========================= */
+.cursor{
+width:22px;
+height:22px;
+border:2px solid #7ad8ff;
+border-radius:50%;
+position:fixed;
+top:0;
+left:0;
+transform:translate(-50%,-50%);
+pointer-events:none;
+z-index:99999;
+box-shadow:0 0 16px rgba(122,216,255,.85);
+transition:.2s;
+}
+
+.cursor.active{
+width:36px;
+height:36px;
+border:2px solid #ffffff;
+box-shadow:0 0 26px rgba(122,216,255,1);
+}
+
+/* =========================
+NAVBAR
+========================= */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+}
+
+.logo{
+font-size:32px;
+font-family:'Cinzel',serif;
+font-weight:700;
+background:linear-gradient(90deg,#dff8ff,#7ad8ff,#0d61ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.navbar ul{
+list-style:none;
+display:flex;
+gap:24px;
+flex-wrap:wrap;
+}
+
+.navbar ul li a{
+text-decoration:none;
+color:#ffffff;
+font-size:17px;
+font-weight:600;
+padding:8px 14px;
+border-radius:30px;
+transition:.35s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+color:#7ad8ff;
+background:rgba(255,255,255,.05);
+box-shadow:0 0 14px rgba(122,216,255,.45);
+}
+
+/* =========================
+MAIN SECTION
+========================= */
+.cert-section{
+padding:20px 60px 80px;
+}
+
+.main-title{
+text-align:center;
+font-size:60px;
+font-weight:800;
+background:linear-gradient(90deg,#ffffff,#7ad8ff,#0d61ff,#7ad8ff,#ffffff);
+background-size:300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:titleMove 5s linear infinite;
+}
+
+@keyframes titleMove{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.line{
+width:180px;
+height:5px;
+margin:18px auto 40px;
+border-radius:30px;
+background:linear-gradient(90deg,#7ad8ff,#0d61ff);
+box-shadow:0 0 18px rgba(122,216,255,.8);
+}
+
+/* category */
+.category{
+text-align:center;
+font-size:34px;
+font-weight:700;
+margin:45px 0 28px;
+color:#8fe3ff;
+text-shadow:0 0 12px rgba(122,216,255,.25);
+}
+
+/* =========================
+GRID
+========================= */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+margin-bottom:20px;
+}
+
+/* =========================
+CARD
+========================= */
+.cert-card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:28px 24px;
+text-align:center;
+transition:.4s;
+backdrop-filter:blur(8px);
+box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+.cert-card:hover{
+transform:translateY(-8px);
+border-color:rgba(122,216,255,.35);
+box-shadow:0 0 24px rgba(122,216,255,.28);
+}
+
+.cert-card i{
+font-size:38px;
+color:#7ad8ff;
+margin-bottom:16px;
+}
+
+.cert-card h3{
+font-size:24px;
+font-weight:700;
+margin-bottom:10px;
+line-height:1.4;
+}
+
+.cert-card p{
+font-size:15px;
+color:#dff8ff;
+margin-bottom:20px;
+line-height:1.6;
+}
+
+/* buttons */
+.cert-card a{
+display:inline-block;
+text-decoration:none;
+padding:12px 22px;
+border-radius:35px;
+font-weight:700;
+font-size:15px;
+color:#00111f;
+background:linear-gradient(90deg,#7ad8ff,#0d61ff);
+transition:.35s;
+}
+
+.cert-card a:hover{
+transform:translateY(-4px);
+box-shadow:0 0 18px rgba(122,216,255,.45);
+}
+
+/* =========================
+BOTTOM QUOTE
+========================= */
+.bottom-quote{
+text-align:center;
+margin-top:50px;
+font-size:26px;
+font-style:italic;
+font-weight:600;
+color:#dff8ff;
+text-shadow:0 0 12px rgba(122,216,255,.35);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:1000px){
+
+body{
+cursor:auto;
+}
+
+.cursor{
+display:none;
+}
+
+.navbar{
+flex-direction:column;
+gap:18px;
+padding:20px;
+}
+
+.navbar ul{
+justify-content:center;
+gap:12px;
+}
+
+.cert-section{
+padding:20px;
+}
+
+.main-title{
+font-size:42px;
+}
+
+.category{
+font-size:26px;
+}
+
+.bottom-quote{
+font-size:20px;
+}
+}
+
+@media(max-width:650px){
+
+.cert-card{
+padding:24px 18px;
+}
+
+.cert-card h3{
+font-size:21px;
+}
+
+.cert-card i{
+font-size:32px;
+}
+
+.cert-card a{
+width:100%;
+}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision | Samruddhi Portfolio</title>
+<link rel="stylesheet" href="vision.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Samruddhi</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="vision.html" class="active">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<!-- MAIN SECTION -->
+<section class="vision-section">
+
+    <h1 class="main-title">VISION & GOALS</h1>
+    <div class="line"></div>
+
+    <p class="intro">
+        I aim to become a future-ready engineer who creates impactful technology,
+        builds global opportunities and grows through discipline, skill and consistency.
+    </p>
+
+    <!-- GRID -->
+    <div class="vision-grid">
+
+        <div class="card">
+            <div class="emoji">🚀</div>
+            <h3>Career Vision</h3>
+            <p>
+                Become a high-value software engineer and contribute to real-world products that solve meaningful problems.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌍</div>
+            <h3>Global Dream</h3>
+            <p>
+                Explore international opportunities, advanced learning and build a career with worldwide impact.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">💻</div>
+            <h3>Tech Mission</h3>
+            <p>
+                Master coding, AI, web development and future technologies to stay ahead of the curve.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📈</div>
+            <h3>Growth Mindset</h3>
+            <p>
+                Improve daily through discipline, learning systems and consistent action over motivation.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline-box">
+        <h2>Roadmap</h2>
+
+        <div class="step">2026 • Build Strong Foundation</div>
+        <div class="step">2027 • Internships + Major Projects</div>
+        <div class="step">2028 • Placements / Higher Studies</div>
+        <div class="step">2030+ • Global Career & Innovation</div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote-box">
+        “I don’t wait for opportunities. I build skills that create them.”
+    </div>
+
+</section>
+
+<script>
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a, button").forEach(item=>{
+item.addEventListener("mouseenter",()=>{
+cursor.style.opacity="0";
+});
+item.addEventListener("mouseleave",()=>{
+cursor.style.opacity="1";
+});
+});
+</script>
+
+</body>
+</html>

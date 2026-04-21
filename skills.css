@@ -1,0 +1,261 @@
+/* skills.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#020b1a,#07152d,#0b2245,#041126);
+color:white;
+cursor:none;
+overflow-x:hidden;
+}
+
+/* clickable */
+a,button{
+cursor:pointer;
+}
+
+/* cursor */
+.cursor{
+width:22px;
+height:22px;
+border:2px solid #7ad8ff;
+border-radius:50%;
+position:fixed;
+top:0;
+left:0;
+transform:translate(-50%,-50%);
+pointer-events:none;
+z-index:9999;
+box-shadow:0 0 16px rgba(122,216,255,.85);
+transition:.2s;
+}
+
+.cursor.active{
+width:34px;
+height:34px;
+border-color:#fff;
+}
+
+/* navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+}
+
+.logo{
+font-size:32px;
+font-family:'Cinzel',serif;
+background:linear-gradient(90deg,#dff8ff,#7ad8ff,#0d61ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.navbar ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.navbar ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:8px 14px;
+border-radius:30px;
+transition:.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+color:#7ad8ff;
+background:rgba(255,255,255,.05);
+box-shadow:0 0 14px rgba(122,216,255,.4);
+}
+
+/* section */
+.skills-section{
+padding:10px 60px 70px;
+}
+
+.main-title{
+text-align:center;
+font-size:64px;
+font-weight:800;
+background:linear-gradient(90deg,#dff8ff,#7ad8ff,#0d61ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:titleMove 4s ease-in-out infinite;
+}
+
+@keyframes titleMove{
+0%{transform:translateX(0);}
+25%{transform:translateX(8px);}
+50%{transform:translateX(0);}
+75%{transform:translateX(-8px);}
+100%{transform:translateX(0);}
+}
+
+.line{
+width:180px;
+height:5px;
+margin:18px auto 45px;
+border-radius:20px;
+background:linear-gradient(90deg,#7ad8ff,#0d61ff);
+box-shadow:0 0 18px rgba(122,216,255,.8);
+}
+
+.category{
+text-align:center;
+font-size:34px;
+margin:50px 0 35px;
+color:#8fe3ff;
+}
+
+/* grid */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+margin-bottom:20px;
+}
+
+.skill-box{
+text-align:center;
+transition:.4s;
+}
+
+.skill-box:hover{
+transform:translateY(-8px);
+}
+
+/* ring */
+.ring{
+--percent:85;
+width:150px;
+height:150px;
+margin:auto;
+border-radius:50%;
+padding:8px;
+background:
+conic-gradient(#7ad8ff calc(var(--percent)*1%), rgba(255,255,255,.08) 0);
+box-shadow:
+0 0 12px rgba(122,216,255,.6),
+0 0 24px rgba(122,216,255,.45);
+position:relative;
+}
+
+.ring::before{
+content:"";
+position:absolute;
+inset:10px;
+border-radius:50%;
+background:#07152d;
+}
+
+/* values */
+.p90{--percent:90;}
+.p85{--percent:85;}
+.p80{--percent:80;}
+.p75{--percent:75;}
+.p70{--percent:70;}
+
+/* inner */
+.inner{
+position:absolute;
+inset:18px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:2;
+}
+
+.inner i,
+.inner span:first-child{
+font-size:34px;
+margin-bottom:6px;
+font-weight:700;
+}
+
+.inner span:last-child{
+font-size:24px;
+font-weight:700;
+}
+
+/* colors */
+.python{color:#3776ab;}
+.c-logo{color:#00bfff;}
+.java{color:#f89820;}
+.cpp-logo{color:#6495ed;}
+.html{color:#e44d26;}
+.css{color:#1572b6;}
+.js{color:#f7df1e;}
+.mysql{color:#4db6ff;}
+.mongo{color:#47a248;}
+.git{color:#f1502f;}
+.vscode{color:#29b6ff;}
+
+/* labels */
+.skill-box h3{
+margin-top:18px;
+font-size:24px;
+font-weight:700;
+}
+
+/* mobile */
+@media(max-width:900px){
+
+body{cursor:auto;}
+.cursor{display:none;}
+
+.navbar{
+flex-direction:column;
+gap:18px;
+padding:20px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.skills-section{
+padding:20px;
+}
+
+.main-title{
+font-size:42px;
+}
+
+.category{
+font-size:24px;
+}
+
+.ring{
+width:120px;
+height:120px;
+}
+
+.inner i,
+.inner span:first-child{
+font-size:28px;
+}
+
+.inner span:last-child{
+font-size:20px;
+}
+
+.skill-box h3{
+font-size:20px;
+}
+}
