@@ -1,0 +1,135 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Samruddhi Portfolio</title>
+
+<link rel="stylesheet" href="contact.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Samruddhi</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-section">
+
+    <h1 class="main-title">CONTACT ME</h1>
+    <div class="line"></div>
+
+    <p class="intro">
+        Open to internships, collaborations, projects and growth opportunities.
+    </p>
+
+    <!-- Contact Cards -->
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>sbmate07@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+91 9373670267</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Location</h3>
+            <p>Pune, Maharashtra</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Status</h3>
+            <p>B.Tech CSE Student</p>
+        </div>
+
+    </div>
+
+    <!-- Social Buttons -->
+    <div class="social-links">
+
+        <a href="https://www.linkedin.com/in/samruddhi-mate-4b9b8b3b8?utm_source=share_via&utm_content=profile&utm_medium=member_ios"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+
+        <a href="https://github.com/Samruddhi-webdev/fraud-detection-ai"><i class="fa-brands fa-github"></i> GitHub</a>
+
+        
+
+        <a href="mailto:sbmate07@gmail.com">
+            <i class="fa-solid fa-paper-plane"></i> Email Me
+        </a>
+
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-box">
+
+        <h2>Send Message</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send</button>
+
+        </form>
+
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="bottom-quote">
+        “Let’s build something meaningful.”
+    </div>
+
+</section>
+
+<!-- Cursor Script -->
+<script>
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a,button,input,textarea").forEach(item=>{
+item.addEventListener("mouseenter",()=>{
+cursor.classList.add("active");
+});
+item.addEventListener("mouseleave",()=>{
+cursor.classList.remove("active");
+});
+});
+</script>
+
+</body>
+</html>
