@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samruddhi Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="marquee">
+    <div class="marquee-content">
+        Building Skills • Creating Impact • Growing Daily •
+        Building Skills • Creating Impact • Growing Daily •
+        Building Skills • Creating Impact • Growing Daily •
+        Building Skills • Creating Impact • Growing Daily •
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="logo">Samruddhi</div>
+
+    <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero2">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+        <h1>Samruddhi Mate</h1>
+
+        <h3>Engineer in Progress • Future AI Innovator</h3>
+
+        <p>
+            Passionate about technology, design, coding and
+            building a powerful future.
+        </p>
+    </div>
+
+    <!-- RIGHT PHOTO -->
+    <div class="hero-photo">
+        <img src="my_photo.jpeg" alt="Samruddhi">
+    </div>
+
+</section>
+
+<!-- QUOTE BELOW HERO -->
+<div class="hero-quote">
+    “When the going gets tough, the tough get going.”
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<script>
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+});
+
+document.querySelectorAll('a, button, .btn, img').forEach(item => {
+    item.addEventListener('mouseenter', () => cursor.classList.add('active'));
+    item.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+});
+</script>
+
+</body>
+</html>
